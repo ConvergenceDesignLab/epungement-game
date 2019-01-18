@@ -25,7 +25,12 @@ http-server -c-1 -o
 
 ### Deploying
 
-You can copy the contents of this repository to a server for deploying. It's recommended to either configure the server to ignore .git related files/directories, or just not copy over the `.git` folder.
+You can copy the contents of this repository to a server for deploying. It's recommended to either configure the server to ignore .git related files/directories, or just not copy over the `.git` folder. Example Apache config for ignoring .git files:
+
+```apacheconf
+# 404 any git related files
+RewriteRule ^.*\.git.* - [R=404]
+```
 
 ### Changelog
 
