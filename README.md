@@ -16,7 +16,7 @@ The game appears to have been build with a combination of Construct 3 and straig
 
 ### Running
 
-For running the game, simply open up this folder in your choosen http server. One way if you have Node installed:
+For running the game, simply open up the `expungement-game` folder in your choosen http server. One way if you have Node installed, open a terminal in the `expungement-game` folder and run:
 
 ```
 npm i -g http-server
@@ -25,12 +25,7 @@ http-server -c-1 -o
 
 ### Deploying
 
-You can copy the contents of this repository to a server for deploying. It's recommended to either configure the server to ignore .git related files/directories, or just not copy over the `.git` folder. Example Apache config for ignoring .git files:
-
-```apacheconf
-# 404 any git related files
-RewriteRule ^.*\.git.* - [R=404]
-```
+You can copy the contents of the `expungement-game` folder to a server for deploying, just make sure you are copying the `expugment-game` folder within this repository and _not_ the whole repository (which includes .git and the readme).
 
 ### Changelog
 
