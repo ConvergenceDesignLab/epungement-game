@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="manifest" href="../manifest.json">
+        <link rel="stylesheet" href="./cutscenes/cutscene.css"/>
+        <link rel="stylesheet" href="./index.css"/>
+        <script>
+            function load() {
+                window.location.assign("./cutscenes/cutscene-1.html");
+            }
+        </script>
+    </head>
+    <body onclick="load()">
+       <div class="rotate"><img src="./assets/rotate.gif"><p>ROTATE DEVICE</p></div>
+       <section>
+           <div class="layer papers paper four right active">
+           </div>
+           <div class="layer papers paper three left active">
+           </div>
+           <div class="layer papers paper two right active">
+           </div>
+           <div class="layer papers paper one left active">
+               <h1>Expungement Quest!</h1>
+               <p>Tap or click to play</p>
+<!--               <br>-->
+               <p>supports the following web browsers:</p>
+               <div>
+                   <img src="./assets/chrome.png" alt="Chrome">
+                   <img src="./assets/safari.jpeg" alt="Safari">
+                   <img src="./assets/firefox.jpeg" alt="Firefox">
+               </div>
+           </div>
+        </section>
+    </body>
+</html>

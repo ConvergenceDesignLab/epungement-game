@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="./cutscene.js"></script>
+        <link rel="stylesheet" href="./cutscene.css"/>
+        <link rel="stylesheet" href="./boss-fight.css"/>
+    </head>
+    <body onload="load()">
+      <div class="rotate"><img src="../assets/rotate.gif"><p>ROTATE DEVICE</p></div>
+       <section>
+        <img src="../assets/boss-fight/Player%20boss%20fight.png" class="layer player">
+        <div class="layer boss idle">
+            <img src="../assets/boss-fight/pain%201.png" alt="">
+            <img src="../assets/boss-fight/pain%202.png" alt="">
+            <img src="../assets/boss-fight/pain%203.png" alt="">
+            <img src="../assets/boss-fight/pain%204.png" alt="">
+            <img src="../assets/boss-fight/yell%201.png" alt="">
+            <img src="../assets/boss-fight/yell%202.png" alt="">
+            <img src="../assets/boss-fight/yell%203.png" alt="">
+            <img src="../assets/boss-fight/yell%204.png" alt="">
+            <img src="../assets/boss-fight/yell%205.png" alt="">
+        </div>  
+        <div class="speech-bubble active"></div>
+        <div class="speech-bubble player"><p>Uh oh</p></div>
+        <div class="speech-bubble player"><p>It's self-doubt</p></div>
+        <div class="speech-bubble player"><p>My worst enemy!</p></div>
+        <div class="speech-bubble player"><p>I gotta beat em!</p></div>
+        <p class="projectile speech-bubble boss" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.add('yell'); item.classList.remove('idle'); })">you can't do it!</p>
+        <p class="projectile speech-bubble player" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.remove('yell'); item.classList.add('pain'); item.classList.add('less-big'); })">yes I can!</p>
+        <p class="projectile speech-bubble boss" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.add('yell'); item.classList.remove('pain');}) ">turn back!</p>
+        <p class="projectile speech-bubble player" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.remove('yell'); item.classList.add('pain'); item.classList.add('smaller');})">no!</p>
+        <p class="projectile speech-bubble boss" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.add('yell'); item.classList.remove('pain');})">it won't work!</p>
+        <p class="projectile speech-bubble player" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.remove('yell'); item.classList.add('pain'); item.classList.add('small');})">it will!</p>
+        <p class="projectile speech-bubble boss" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.add('yell'); item.classList.remove('pain');})">you'll never do it!</p>
+        <p class="projectile speech-bubble player" data-onactive="document.querySelectorAll('.layer.boss, .projectile').forEach(function(item) { item.classList.remove('yell'); item.classList.add('pain'); item.classList.add('smallest');}); setTimeout(function() { window.location.assign('./cutscene-8.html'); }, 2500);">I WILL!</p>
+    </section>
+    </body>
+</html>

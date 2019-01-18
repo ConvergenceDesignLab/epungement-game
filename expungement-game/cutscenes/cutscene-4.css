@@ -1,0 +1,30 @@
+body {
+    width: 100vw;
+    
+    background-color: gainsboro;
+    background-size: cover;
+}
+
+
+.player {
+    left: 30%;
+    bottom: 0%;
+    
+    height: 85%;
+}
+
+.desk {
+    transform: scaleX(-1) translate(50%, 0);
+    
+    left: 55%;
+    bottom: -5%;
+    
+    height: 25%;
+}
+
+.comp {
+    left: 55%;
+    bottom: 8%;
+    
+    height: 37%;
+}

@@ -1,0 +1,426 @@
+body {
+    width: 100vw;
+    
+    margin: 0;
+    
+    background-image: url(../assets/boss-fight/citybackgroundforfight.png);
+    background-size: cover;
+}
+
+p.speech-bubble {
+    font-size: 1.7rem;
+    
+    color: white;
+}
+
+.layer.player, div.speech-bubble.player {
+    left: 25%;
+    bottom: -11%;
+    
+    height: 60%;
+}
+
+.layer.boss, div.speech-bubble.boss {
+    left: 75%;
+    bottom: -11%;
+    
+    height: 110%;
+}
+
+.boss.idle {
+    animation-name: boss-idle;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.boss > img {
+    visibility: hidden;
+    
+    
+    
+    height: 100%;
+    
+    position: fixed;
+    
+    transform: translate(-50%, 0); 
+}
+
+@keyframes boss-idle {
+    from { top: 130%; }
+    to { top: 2%; }
+}
+
+.boss.idle > img:nth-child(9) {
+    visibility: visible;
+}
+
+@keyframes boss-yell1 {
+    0% { visibility: hidden; }
+    6.25% { visibility: hidden; }
+    12.5% { visibility: hidden; }
+    18.75% { visibility: hidden; }
+    25% { visibility: hidden; }
+    31.25% { visibility: hidden; }
+    37.5% { visibility: hidden; }
+    43.75% { visibility: hidden; }
+    50% { visibility: visible; }
+    56.25% { visibility: visible; }
+    62.5% { visibility: visible; }
+    68.75% { visibility: hidden; }
+    75% { visibility: hidden; }
+    81.25% { visibility: hidden; }
+    87.5% { visibility: hidden; }
+    93.75;% { visibility: hidden; }
+    100% { visibility: hidden; }
+}
+@keyframes boss-yell2 {
+    0% { visibility: hidden; }
+    6.25% { visibility: hidden; }
+    12.5% { visibility: hidden; }
+    18.75% { visibility: hidden; }
+    25% { visibility: hidden; }
+    31.25% { visibility: hidden; }
+    37.5% { visibility: hidden; }
+    43.75% { visibility: hidden; }
+    50% { visibility: hidden; }
+    56.25% { visibility: hidden; }
+    62.5% { visibility: hidden; }
+    68.75% { visibility: visible; }
+    75% { visibility: visible; }
+    81.25% { visibility: visible; }
+    87.5% { visibility: visible; }
+    93.75;% { visibility: hidden; }
+    100% { visibility: hidden; }
+}
+@keyframes boss-yell3 {
+    0% { visibility: hidden; }
+    6.25% { visibility: hidden; }
+    12.5% { visibility: visible; }
+    18.75% { visibility: visible; }
+    25% { visibility: hidden; }
+    31.25% { visibility: hidden; }
+    37.5% { visibility: hidden; }
+    43.75% { visibility: hidden; }
+    50% { visibility: hidden; }
+    56.25% { visibility: hidden; }
+    62.5% { visibility: hidden; }
+    68.75% { visibility: hidden; }
+    75% { visibility: hidden; }
+    81.25% { visibility: hidden; }
+    87.5% { visibility: hidden; }
+    93.75;% { visibility: hidden; }
+    100% { visibility: hidden; }
+}
+@keyframes boss-yell4 {
+    0% { visibility: visible; }
+    6.25% { visibility: visible; }
+    12.5% { visibility: hidden; }
+    18.75% { visibility: hidden; }
+    25% { visibility: hidden; }
+    31.25% { visibility: hidden; }
+    37.5% { visibility: hidden; }
+    43.75% { visibility: hidden; }
+    50% { visibility: hidden; }
+    56.25% { visibility: hidden; }
+    62.5% { visibility: hidden; }
+    68.75% { visibility: hidden; }
+    75% { visibility: hidden; }
+    81.25% { visibility: hidden; }
+    87.5% { visibility: hidden; }
+    93.75;% { visibility: visible; }
+    100% { visibility: visible; }
+}
+
+@keyframes boss-yell5 {
+    0% { visibility: hidden; }
+    6.25% { visibility: hidden; }
+    12.5% { visibility: hidden; }
+    18.75% { visibility: hidden; }
+    25% { visibility: visible; }
+    31.25% { visibility: visible; }
+    37.5% { visibility: visible; }
+    43.75% { visibility: hidden; }
+    50% { visibility: hidden; }
+    56.25% { visibility: hidden; }
+    62.5% { visibility: hidden; }
+    68.75% { visibility: hidden; }
+    75% { visibility: hidden; }
+    81.25% { visibility: hidden; }
+    87.5% { visibility: hidden; }
+    93.75;% { visibility: hidden; }
+    100% { visibility: hidden; }
+}
+
+.boss.yell > img {
+     -webkit-animation-duration: 0.4s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.boss.yell > img:nth-child(5) {
+    -webkit-animation-name: boss-yell1;
+    animation-name: boss-yell1;
+}
+
+.boss.yell > img:nth-child(6) {
+    -webkit-animation-name: boss-yell2;
+    animation-name: boss-yell2;
+}
+
+.boss.yell > img:nth-child(7) {
+    -webkit-animation-name: boss-yell5;
+    animation-name: boss-yell5;
+}
+
+.boss.yell > img:nth-child(8) {
+    -webkit-animation-name: boss-yell3;
+    animation-name: boss-yell3;
+}
+
+.boss.yell > img:nth-child(9) {
+    -webkit-animation-name: boss-yell4;
+    animation-name: boss-yell4;
+}
+
+@keyframes boss-pain {
+    0% { left: 75%;}
+    25% { left: 80%;}
+    50% { left: 75%;}
+    75% { left: 75%;}
+    100% { left: 75%;}
+}
+
+@keyframes boss-pain1 {
+    0% { opacity: 1;}
+    24% { opacity: 1;}
+    25% { opacity: 0;}
+    59% { opacity: 0;}
+    50% { opacity: 0;}
+    74% { opacity: 0;}
+    75% { opacity: 0;}
+    99% { opacity: 0;}
+    100% { opacity: 0;}
+}
+@keyframes boss-pain2 {
+    0% { opacity: 0;}
+    24% { opacity: 0;}
+    25% { opacity: 1;}
+    59% { opacity: 1;}
+    50% { opacity: 0;}
+    74% { opacity: 0;}
+    75% { opacity: 0;}
+    99% { opacity: 0;}
+    100% { opacity: 0;}
+}
+@keyframes boss-pain3 {
+   0% { opacity: 0;}
+    24% { opacity: 0;}
+    25% { opacity: 0;}
+    59% { opacity: 0;}
+    50% { opacity: 0;}
+    74% { opacity: 0;}
+    75% { opacity: 1;}
+    99% { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+@keyframes boss-pain4 {
+   0% { opacity: 0;}
+    24% { opacity: 0;}
+    25% { opacity: 0;}
+    59% { opacity: 0;}
+    50% { opacity: 1;}
+    74% { opacity: 1;}
+    75% { opacity: 0;}
+    99% { opacity: 0;}
+    100% { opacity: 0;}
+}
+
+@keyframes boss-pain-idle {
+    0% { visibility: visible; }
+    49% { visibility: visible; }
+    50% { visibility: hidden; }
+    99% { visibility: hidden; }
+    100% { visibility: visible; }
+}
+
+.boss.pain, .boss.pain > img {
+     -webkit-animation-duration: 0.35s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 0.35s;
+/*    -webkit-animation-fill-mode: forwards;*/
+    animation-duration: 0.35s;
+    animation-iteration-count: 1;
+    animation-delay: 0.35s;
+/*    animation-fill-mode: forwards;*/
+}
+
+.boss.pain {
+    -webkit-animation-name: boss-pain;
+    animation-name: boss-pain;
+}
+
+.boss.pain > img:nth-child(1) {
+    visibility: visible;
+    opacity: 0;
+    
+    -webkit-animation-name: boss-pain1;
+    animation-name: boss-pain1;
+}
+
+.boss.pain > img:nth-child(2) {
+    visibility: visible;
+    opacity: 0;
+    
+    -webkit-animation-name: boss-pain2;
+    animation-name: boss-pain2;
+}
+.boss.pain > img:nth-child(3) {
+    visibility: visible;
+    opacity: 0;
+    
+    -webkit-animation-name: boss-pain3;
+    animation-name: boss-pain3;
+}
+
+.boss.pain > img:nth-child(4) {
+    visibility: visible;
+    opacity: 0;
+    
+    -webkit-animation-name: boss-pain4;
+    animation-name: boss-pain4;
+}
+
+.boss.pain > img:nth-child(9) {
+    -webkit-animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    
+    -webkit-animation-name: boss-pain-idle;
+    animation-name: boss-pain-idle;
+}
+
+@keyframes boss-projectile {
+    0% { left: 75%; visibility: hidden; }
+    1% { left: 75%; visibility: visible; }
+    99% { left: 25%; top: 55%; visibility: visible; }
+    100% { left: 25%; top: 55%; visibility: hidden; }
+}
+
+@keyframes player-projectile {
+    0% { left: 25%; top: 55%; visibility: hidden; }
+    1% { left: 25%; top: 55%; visibility: visible; }
+    99% { left: 75%; visibility: visible; }
+    100% { left: 75%; visibility: hidden; }
+}
+
+.projectile {
+    visibility: hidden;
+    
+    transform: rotate(-27deg);
+}
+
+.projectile.active {
+    top: 20%;
+    
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+.projectile.boss.active {
+    -webkit-animation-name: boss-projectile;
+    animation-name: boss-projectile;
+}
+
+.projectile.player.active {
+    -webkit-animation-name: player-projectile;
+    animation-name: player-projectile;
+}
+
+.layer.boss {
+    transition: height 0.5s;
+    transition-delay: 0.35s;
+}
+
+.layer.boss.less-big {
+    height: 90%;
+}
+
+.layer.boss.smaller {
+    height: 70%;
+}
+.layer.boss.small {
+    height: 50%;
+}
+.layer.boss.smallest {
+    transition: height 0.5s, bottom 3s;
+    transition-delay: 0.5s;
+    
+    height: 40%;
+    
+    bottom: -50%;
+
+    animation-iteration-count: infinite;
+}
+
+.layer.boss.smallest > img {
+    animation-iteration-count: infinite;
+}
+
+.layer.boss.smallest > img:nth-child(9) {
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+}
+
+.projectile.boss.less-big:not(.layer) {
+    top: 40%;
+    
+    transform: rotate(-12deg);
+}
+
+.projectile.boss.smaller:not(.layer) {
+    top: 60%;
+    
+    transform: rotate(-3deg);
+}
+.projectile.boss.small:not(.layer) {
+    top: 80%;
+    
+    transform: rotate(9deg);
+}
+.projectile.boss.smallest:not(.layer) {
+    top: 100%;
+    
+    transform: rotate(21deg);
+}
+
+.projectile.player.less-big:not(.layer) {
+    top: 20%;
+}
+
+.projectile.player.smaller:not(.layer) {
+    top: 40%;
+    
+    transform: rotate(-12deg);
+}
+.projectile.player.small:not(.layer) {
+    top: 60%;
+    
+    transform: rotate(-3deg);
+}
+.projectile.player.smallest:not(.layer) {
+    top: 80%;
+    
+    transform: rotate(9deg);
+}

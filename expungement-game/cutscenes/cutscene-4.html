@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="manifest" href="../manifest.json">
+        <script src="cutscene.js"></script>
+        <link rel="stylesheet" href="./cutscene.css"/>
+        <link rel="stylesheet" href="./cutscene-4.css"/>
+    </head>
+    <body onload="load()">
+      <div class="rotate"><img src="../assets/rotate.gif"><p>ROTATE DEVICE</p></div>
+       <section class="parallax">
+        <img src="../assets/cutscene-4/Player.png" class="layer player">
+        <img src="../assets/cutscene-4/Desk.png" class="layer desk">
+        <img src="../assets/cutscene-4/Comp.png" class="layer comp">
+        <div class="speech-bubble player active"></div>
+        <div class="speech-bubble player"><p>Man, that day was the worst</p></div>
+        <div class="speech-bubble player"><p>I can’t believe I have to figure this out.</p></div>
+        <div class="speech-bubble player"><p>I should have a job by now!</p></div>
+        <div class="speech-bubble player"><p>If I do have a record, I have to take care of it NOW.</p></div>
+        <div class="speech-bubble player"><p>What was that website they were talking about?</p></div>
+        <div class="speech-bubble" data-onactive="window.location.assign('./cutscene-5.html')"></div>
+        </section>
+    </body>
+</html>

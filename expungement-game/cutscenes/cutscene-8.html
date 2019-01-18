@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="manifest" href="../manifest.json">
+        <script src="../../global/libraries/clipboard.js-master/dist/clipboard.js"></script>
+        <script>
+            var codes = ["IDCARD", "RAPSHEET", "HELPDESK", "JUVENILE"];
+
+            function load2() {
+                document.querySelector(".copy").innerHTML = codes[Math.round(Math.abs(Math.random() * 3))];
+                
+                var clipboard = new Clipboard('.btn', {
+                    target: function() {
+                        return document.querySelector('.copy');
+                    }
+                });
+            }
+
+            function done() {
+                window.close();
+            }
+        </script>
+        <script src="cutscene.js"></script>
+        <link rel="stylesheet" href="./cutscene.css"/>
+        <link rel="stylesheet" href="./cutscene-8.css"/>
+    </head>
+    <body onload="load(); load2();">
+      <div class="rotate"><img src="../assets/rotate.gif"><p>ROTATE DEVICE</p></div>
+       <section>
+           <img class="layer envelope" src="../assets/cutscene-8/Envelope.png">
+           <div class="layer papers paper four right">
+               <h1>Expungement Quest!</h1>
+               <div>
+                   <p>Created for Convergence Design Lab at Columbia College Chicago</p>
+                   <h2>Concept Design</h2>
+                   <p>Jude Zich</p>
+                   <p>Liam Walsh</p>
+                   <p>Khanh Bui</p>
+                   <p>Steven Fisher</p>
+               </div>
+               <div>
+                   <h2>Game Production</h2>
+                   <p>Jude Zich</p>
+                   <p>Liam Walsh</p>
+                   <p>Khanh Bui</p>
+                   <p>Andrew Shike</p>
+                   <h2>Producer/Project Manager</h2>
+                   <p>Eden Unluata</p>
+               </div>
+           </div>
+<!--
+           <div class="layer papers paper four right">
+               <h2>Producer/Project Manager</h2>
+               <p>Eden Unluata</p>
+           </div>
+           <div class="layer papers paper three left">
+               <h2>Game Production</h2>
+               <p>Jude Zich</p>
+               <p>Liam Walsh</p>
+               <p>Khanh Bui</p>
+               <p>Andrew Shike</p>
+           </div>
+           <div class="layer papers paper two right">
+               <h2>Concept Design</h2>
+               <p>Jude Zich</p>
+               <p>Liam Walsh</p>
+               <p>Khanh Bui</p>
+               <p>Steven</p>
+           </div>
+           <div class="layer papers paper one left">
+               <h1>Expungement Quest!</h1>
+               <p>Created for Convergence Design Lab at Columbia College Chicago</p>
+           </div>
+-->
+           <img class="layer papers zero" src="../assets/cutscene-8/papers.png">
+           <div class="layer months"><p>100 days later...</p></div>
+           <div class="layer papers paper code">
+                <h1>You Win!</h1>
+                <p>Copy this code and submit it to the playlist to complete this XP:</p>
+                <p class="copy"></p>
+                <button type="button" class="btn">Copy</button>
+                <p class="back" onclick="done()">Go Back</p>
+           </div>
+<!--            <img class="layer phone" src="../assets/cutscene-8/Phone.png">-->
+            <div class="speech-bubble active"></div>
+            <div class="speech-bubble" data-onactive="document.querySelectorAll('.layer').forEach(function(item) { item.classList.add('active'); });"></div>
+            <div class="speech-bubble" data-onactive="document.querySelectorAll('.zero').forEach(function(item) { item.classList.remove('active'); });"></div>
+<!--
+            <div class="speech-bubble" data-onactive="document.querySelectorAll('.one').forEach(function(item) { item.classList.remove('active'); });"></div>
+            <div class="speech-bubble" data-onactive="document.querySelectorAll('.two').forEach(function(item) { item.classList.remove('active'); });"></div>
+            <div class="speech-bubble" data-onactive="document.querySelectorAll('.three').forEach(function(item) { item.classList.remove('active'); });"></div>
+-->
+            <div class="speech-bubble" data-onactive="document.querySelectorAll('.four').forEach(function(item) { item.classList.remove('active'); }); document.querySelectorAll('.code').forEach(function(item) { item.classList.add('activated'); });"></div>
+<!--            <div class="speech-bubble" data-onactive="setTimeout(function() { window.location.assign('./boss-fight.html'); }, 5000);"></div>-->
+        </section>
+    </body>
+</html>

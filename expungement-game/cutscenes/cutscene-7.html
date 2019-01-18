@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="manifest" href="../manifest.json">
+        <script src="cutscene.js"></script>
+        <link rel="stylesheet" href="./cutscene.css"/>
+        <link rel="stylesheet" href="./cutscene-7.css"/>
+    </head>
+    <body onload="load()">
+      <div class="rotate"><img src="../assets/rotate.gif"><p>ROTATE DEVICE</p></div>
+       <section>
+        <img src="../assets/cutscene-7/ID.png" class="layer id">
+        <img src="../assets/cutscene-7/Paper.png" class="layer paper">
+        <img src="../assets/cutscene-7/signature.png" class="layer signature hidden">
+        <div class="layer lid upper hidden"></div>
+        <div class="layer lid lower hidden"></div>
+        <div class="speech-bubble active"></div>
+        <div class="speech-bubble" data-onactive="document.querySelectorAll('.hidden').forEach(function(item) { item.classList.remove('hidden'); }); setTimeout(function() { window.location.assign('./boss-fight.html'); }, 5000);"></div>
+        </section>
+    </body>
+</html>

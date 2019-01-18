@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Damion|Yellowtail');
+
+-webkit-@keyframes parallax {
+    from { width: 85vw; }
+    to { width: 75vw; }
+}
+
+@keyframes parallax {
+    from { width: 100vw; }
+    to { width: 75vw; }
+}
+
+/*
+.layer {
+    overflow: hidden;
+}
+*/
+
+html {
+    height: 100vh;
+/*    max-height: calc(9 / 16 * 100vw);*/
+    
+/*    overflow: hidden;*/
+}
+
+
+html, body, section {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+/*
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+*/
+}
+
+body {
+    margin: 0;
+    
+    width: 100vw;
+    
+    cursor: pointer;
+    
+    
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    height: inherit;
+    max-height: inherit;
+    
+    background-size: cover;
+    background-clip: border-box;
+}
+
+body > section {
+    height: inherit;
+    max-height: inherit;
+    width: 100%;
+    
+}
+
+.parallax {
+/*    height: 100%;*/
+    width: 75%;
+    
+    margin: 0;
+    
+    -webkit-animation-name: parallax;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-name: parallax;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.parallax, .layer, .speech-bubble {
+    position: fixed;
+    
+    transform: translate(-50%, 0);
+}
+
+.parallax {
+    left: 50vw;
+}
+div.speech-bubble {
+    width: 30vw;
+    
+    text-align: center;
+}
+
+p, h3 {
+    font-size: 1.5rem;
+    
+    font-family: sans-serif;
+    
+    display: inline-block;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    
+/*    font-family: 'Courgette', cursive;*/
+/*    font-family: 'Yellowtail', cursive;*/
+    font-family: 'Damion', sans-serif;
+    
+    display: inline-block;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+div.speech-bubble > p {
+    
+    font-size: 1.5rem;
+    
+    background-color: white;
+    
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 0.7rem 1rem; 
+    
+    transition: all 0.2s;
+    
+    opacity: 0;
+}
+
+div.speech-bubble.active > p {
+    transform: translate(0, -14vh);
+    
+    opacity: 1;
+}
+
+.instructions {
+    visibility: hidden;
+    
+    position: fixed;
+    
+    left: 50%;
+    bottom: 5%;
+    
+    width: auto;
+    height: 20vh;
+    
+    font-size: 2rem;
+/*    color: white;*/
+}
+
+.instructions.active {
+    visibility: visible;
+}
+
+.rotate {
+    background-color: black;
+    
+    position: fixed;
+    
+    width: 100vw;
+    height:0;
+    
+    z-index: 100;
+    
+    visibility: hidden;
+}
+
+.rotate > p {
+    color: white;
+    
+    
+     position: fixed;
+    
+    left: 50vw;
+    top: 50vh;
+    
+    transform: translate(-50%, 25%);
+}
+
+.rotate > img {
+    color: white;
+    
+    width: 40vw;
+    
+    position: fixed;
+    
+    left: 50vw;
+    top: 50vh;
+    
+    transform: translate(-50%, -80%);
+}
+
+@media all and (max-width: 100vh) {  /* mobile */ 
+    .rotate { 
+        height: 100vh;
+        
+        visibility: visible;
+    }
+}
