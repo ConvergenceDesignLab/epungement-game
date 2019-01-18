@@ -1,0 +1,189 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: url(../assets/cutscene-8/Background.png);
+    background-size: cover;
+}
+
+.layer {
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+}
+
+.months, .months > p {
+    position: fixed;
+    
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    
+    margin: 0;
+    
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes months {
+    0% { opacity: 1; }
+    50% { opacity: 0; height: 100%; }
+    100% { opacity: 0; height: 0; }
+}
+
+@keyframes months2 {
+    0% { opacity: 1; }
+    50% { opacity: 0; height: auto; }
+    100% { opacity: 0; height: 0; }
+}
+
+.months {
+    width: 100%;
+    height: 100%;
+    
+    animation-name: months;
+    
+    background-color: white;
+    
+    transition: none;
+    transition-duration: 4s;
+}
+
+.months > p {
+    transform: translate(-50%, -50%);
+    
+    animation-name: months2;
+    
+    font-size: 4rem;
+    text-align: center;
+    
+    width: 100%;
+}
+
+/*
+.months.active {
+    
+    left: 150%;
+}
+*/
+
+.papers {
+    top: -100%;
+    height: 90%;
+    left: 40%;
+}
+
+.papers.active {
+    top: 3%;
+}
+
+.paper.active {
+    top: 6%;
+}
+
+.paper {
+    border-width: thin;
+    border-color: black;
+    border-style: solid;
+    
+    width: 35%;
+    
+    background-color: #f9f9f9;
+    
+    height: 85%;
+    
+    
+}
+
+.left.active {
+    transform: rotate(3deg) translate(-50%, 0);
+}
+
+.right.active {
+    transform: rotate(-4deg) translate(-50%, 0);
+}
+
+.paper * {
+    display: block;
+     text-align: center;
+    
+/*    transform: translate(0, 50%);*/
+}
+
+.paper > div {
+    width: 50%;
+    float: left;
+}
+
+.paper > div > p {
+    margin: 0.5rem 0.5rem;
+    
+    font-size: 3vh;
+}
+
+.paper > h1 {
+    margin: 1rem;
+}
+
+.paper > div > h2 {
+    margin: 0rem 0.5rem;
+    
+    font-size: 3vh;
+}
+
+/*
+.paper > div > * {
+    display: block;
+     text-align: center;
+}
+*/
+
+:not(.active) {
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-delay: 0s;
+}
+
+.envelope {
+    bottom: -50%;
+    height: 70%;
+    left: 70%;
+}
+
+.envelope.active {
+    bottom: -3%;
+}
+
+.code, .code.active {
+    top: -100%;
+    
+    transition-delay: 1s;
+    
+    width: 40%;
+}
+
+.code > button {
+    margin: auto;
+    
+    font-size: 1.5rem;
+    
+    padding: 0.5rem;
+}
+
+.code.activated {
+    top: 6%;
+}
+
+.code > * {
+    margin: 1rem;
+}
+
+.back {
+/*    margin-top: 2rem; */
+    
+    text-decoration: underline;
+    
+    cursor: pointer;
+}
